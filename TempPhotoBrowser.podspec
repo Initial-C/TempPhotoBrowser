@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'TempPhotoBrowser'
-  s.version      = '0.0.1'
+  s.version      = '0.0.2'
   s.summary      = 'An easy way to Multiselect photos from ablum, and support for multiple languages (Chinese, English, Japanese ...)'
   s.homepage     = 'https://github.com/Initial-C/TempPhotoBrowser'
   s.license      = 'MIT'
