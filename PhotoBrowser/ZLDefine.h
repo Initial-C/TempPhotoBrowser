@@ -36,8 +36,11 @@
 #define kZLPhotoBrowserBundle [NSBundle bundleForClass:[self class]]
 
 // 图片路径
+#define kZLDefaultPath @"Frameworks/ChatComponent/ZLPhotoBrowser.framework/ZLPhotoBrowser.bundle"
+#define kZLDefaultOriPath @"Frameworks/ZLPhotoBrowser.framework/ZLPhotoBrowser.bundle"
+#define kZLDefaultRootPath ([UIImage imageNamed:[kZLDefaultPath stringByAppendingPathComponent:@"defaultphoto.png"]] ? kZLDefaultPath : kZLDefaultOriPath)
 #define kZLPhotoBrowserSrcName(file) [@"ZLPhotoBrowser.bundle" stringByAppendingPathComponent:file]
-#define kZLPhotoBrowserFrameworkSrcName(file) [@"Frameworks/ChatComponent/ZLPhotoBrowser.framework/ZLPhotoBrowser.bundle" stringByAppendingPathComponent:file]
+#define kZLPhotoBrowserFrameworkSrcName(file) [kZLDefaultRootPath stringByAppendingPathComponent:file]
 
 #define kViewWidth      [[UIScreen mainScreen] bounds].size.width
 //如果项目中设置了导航条为不透明，即[UINavigationBar appearance].translucent=NO，那么这里的kViewHeight需要-64
